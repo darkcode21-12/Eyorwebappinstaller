@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - Your Project</title>
+  <link rel="stylesheet" href="/styles/doc.css">
+</head>
+<body>
+  <header>
+    <h1>Project Documentation</h1>
+    <a class="doc-link" href="/index.html">← Back to Download</a>
+  </header>
+
+  <main class="container">
+    <div class="tabs">
+      <button class="tab-btn" onclick="openTab('start')">Getting Started</button>
+      <button class="tab-btn" onclick="openTab('install')">Installation</button>
+      <button class="tab-btn" onclick="openTab('usage')">Usage</button>
+    </div>
+
+    <div id="start" class="tab-content">
+      <h2>Getting Started</h2>
+      <p>After the development of our web our team want to take this project farther for the seek of students and school members
+        so now we presented a prototype form of our application.<br>
+        This project exist in 3 forms for students,teachers and also for parents.and also easy to use and present for 2 os system android and windows
+        .We will be 100% sure you will be satisfied after visiting our Application.Thank You from Eyor developers community..
+    </p>
+    </div>
+    <div id="install" class="tab-content" style="display:none">
+      <h2>Installation</h2>
+      <p><strong>Windows(.exe)</strong><br>
+        Setuing up on windows is easy just click the button  For windows and after downloaing it run it as adminstration and if the 
+        computer gives you a warning window just press the run botton on the botton right.
+    </p>
+    <img src="#" alt="">
+    </div>
+    <div id="usage" class="tab-content" style="display:none">
+      <h2>Usage</h2>
+      <p>How to use features and tools.</p>
+    </div>
+   
+
+  <script>
+    function openTab(id) {
+      document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
