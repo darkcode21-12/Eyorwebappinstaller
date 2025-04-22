@@ -7,7 +7,7 @@
 </head>
 <body>
   <header>
-    <h1>Your Project</h1>
+    <h1>Eyor apps</h1>
     <p>Get started with your download below.</p>
     <a class="doc-link doc-top" href="/pages/documentation.html">Go to Documentation →</a>
   </header>
@@ -17,31 +17,36 @@
       <h2>Download</h2>
       <p>Choose your platform and role:</p>
       <button class="download-btn" onclick="handleDownload('windows')">Download for Windows</button>
-      <button class="download-btn" onclick="handleDownload('android')">Download for Android</button>
+      <button class="download-btn" onclick="Newupdate()">Download for Android</button>
     </section>
   </main>
 
   <script>
-    function handleDownload(platform) {
-      const userType = prompt("Are you a Teacher or a Student?");
-      if (!userType) return;
-      const lower = userType.toLowerCase();
+function handleDownload(platform) {
+  const userType = prompt("Are you a Teacher or a Student?");
+  if (!userType) return;
 
-      const links = {
-        windows: {
-          teacher: "https://github.com/your-org/your-project/releases/download/v1.0/windows-teacher.zip",
-          student: "https://github.com/your-org/your-project/releases/download/v1.0/windows-student.zip"
-        },
-        android: {
-          teacher: "https://github.com/your-org/your-project/releases/download/v1.0/android-teacher.apk",
-          student: "https://github.com/your-org/your-project/releases/download/v1.0/android-student.apk"
-        }
-      };
+  const lower = userType.trim().toLowerCase();
 
-      const url = links[platform]?.[lower];
-      if (url) window.location.href = url;
-      else alert("Invalid input. Please type either 'Teacher' or 'Student'.");
+  const links = {
+    windows: {
+      teacher: "https://raw.githubusercontent.com/darkcode21-12/eyorapps/main/installer/original.py",
+      student: "https://raw.githubusercontent.com/darkcode21-12/eyorapps/main/installer/original.py"
     }
+  
+  };
+
+  const url = links[platform]?.[lower];
+  if (url && url !== "#") {
+    window.location.href = url;
+  } else {
+    alert("Invalid input or file not available. Please type either 'Teacher' or 'Student'.");
+  }
+}
+function Newupdate() {
+  alert("on update")
+}
+
   </script>
 </body>
 </html>
